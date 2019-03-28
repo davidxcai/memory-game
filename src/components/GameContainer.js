@@ -7,7 +7,7 @@ class GameContainer extends Component {
         win: false,
         score: 0,
         gifs: this.props.gifs,
-        clicked: ['nothing'],
+        clicked: ['nothing']
     }
 
     reset = () => {
@@ -20,11 +20,12 @@ class GameContainer extends Component {
     scores = (selected, clicked) => {
         if (clicked) {
             this.reset();
-            this.setState(this.props.shuffle(this.state.gifs))
+            // this.setState(this.props.shuffle(this.state.gifs))
         } else {
             this.state.clicked.push(selected)
-            this.setState(this.props.shuffle(this.state.gifs))
+            // this.setState(this.props.shuffle(this.state.gifs))
             this.setState({ score: this.state.score + 1 })
+            console.log('in scores: ' + this.state.score)
         }
     }
 
@@ -32,8 +33,9 @@ class GameContainer extends Component {
         const selected = event.target.id;
         const clicked = this.state.clicked.includes(selected);
         this.scores(selected, clicked)
-        if (this.state.win) {
-            alert('You are winner')
+        console.log('after scores: ' + this.state.score);
+        if (this.state.scores === 12) {
+            this.setState({ win: true })
         }
     }
 
@@ -43,7 +45,7 @@ class GameContainer extends Component {
                 <StatusBar
                     win={this.state.win}
                     score={this.state.score}
-                    handlePageChanger={this.props.handlePageChanger}
+                    handlePageChange={this.props.handlePageChange}
                 />
                 <Gif
                     check={this.check}

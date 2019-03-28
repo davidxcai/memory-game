@@ -33,10 +33,15 @@ body {
 
 .jumbotron {
   background-color: beige;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .pic-box {
   overflow: hidden;
+}
+
+.monster-font {
+  font-family: 'Montserrat', sans-serif;
 }
 
 @keyframes App-logo-spin {

@@ -6,7 +6,7 @@ function SearchForm(props) {
         <div className='container'>
         <Jumbotron />
             <div className='form-group'>
-            <label htmlFor='search'>Search</label>
+            <label htmlFor='search' className='text-light'>Gif Search</label>
             <input 
                 onChange={props.handleInputChange}
                 value={props.search}
