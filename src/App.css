@@ -23,12 +23,20 @@
   color: #61dafb;
 }
 
-.pic-box {
-  overflow: hidden;
+body {
+  background-color: black;
 }
 
 .click-img {
   height: 180px;
+}
+
+.jumbotron {
+  background-color: beige;
+}
+
+.pic-box {
+  overflow: hidden;
 }
 
 @keyframes App-logo-spin {

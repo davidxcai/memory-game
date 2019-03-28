@@ -46,6 +46,7 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
+  // Conditional rendering determines which page to load based on currentPage
   renderPage = () => {
     if (this.state.currentPage === 'Search') {
       return <SearchForm 

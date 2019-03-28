@@ -12,13 +12,13 @@ function SearchForm(props) {
                 value={props.search}
                 name='search'
                 type='text'
-                className='form-control'
+                className='form-control rounded-pill'
                 placeholder='Search for gifs...'
                 id='search'
             />
             <button 
             onClick={props.handleFormSubmit}
-            className='btn btn-dark rounded-pill'
+            className='btn btn-dark rounded-pill mt-3'
             >
                 Search
             </button>
