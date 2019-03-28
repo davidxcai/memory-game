@@ -4,7 +4,6 @@ import StatusBar from './StatusBar';
 
 class GameContainer extends Component {
     state = {
-        win: false,
         score: 0,
         gifs: this.props.gifs,
         clicked: ['nothing']
@@ -20,12 +19,11 @@ class GameContainer extends Component {
     scores = (selected, clicked) => {
         if (clicked) {
             this.reset();
-            // this.setState(this.props.shuffle(this.state.gifs))
+            this.setState(this.props.shuffle(this.state.gifs))
         } else {
             this.state.clicked.push(selected)
-            // this.setState(this.props.shuffle(this.state.gifs))
-            this.setState({ score: this.state.score + 1 })
-            console.log('in scores: ' + this.state.score)
+            this.setState({ score: this.state.score + 1})
+            this.setState(this.props.shuffle(this.state.gifs))
         }
     }
 
@@ -33,17 +31,12 @@ class GameContainer extends Component {
         const selected = event.target.id;
         const clicked = this.state.clicked.includes(selected);
         this.scores(selected, clicked)
-        console.log('after scores: ' + this.state.score);
-        if (this.state.scores === 12) {
-            this.setState({ win: true })
-        }
     }
 
     render() {
         return (
             <div className='container'>
                 <StatusBar
-                    win={this.state.win}
                     score={this.state.score}
                     handlePageChange={this.props.handlePageChange}
                 />

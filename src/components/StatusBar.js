@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 
 class StatusBar extends Component {
     status = () => {
-        if (this.props.win === true) {
-            return <h1>You win! :)</h1>
-        } else if (this.props.win === false) {
-            console.log(this.props.score)
-            // console.log(this.props.handlePageChange)
+        if (this.props.score === 12) {
+            return <h5 className='text-light monster-font'>You win! :)</h5>
+        } else if (this.props.score < 12) {
+            console.log('status score: ' + this.props.score)
             return <h5 className='text-light monster-font'>Score: {this.props.score} | 12</h5>
         }
     }
@@ -23,7 +22,7 @@ class StatusBar extends Component {
                     className='btn btn-transparent text-light monster-font'
                     onClick={this.changePage}
                 >
-                    Home
+                    Search
                     </button>
             </div>
         )
