@@ -12,6 +12,7 @@ function Gif(props) {
         className='w-100 click-img'
         />
         </div>
+        
     })
     return (
         <div className='row'>

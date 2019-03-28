@@ -23,31 +23,15 @@ class GameContainer extends Component {
         if (clicked) {
             this.reset();
         } else {
-            if (this.state.score === 12) {
-                alert('You are winner')
-            } else {
-                this.state.clicked.push(selected)
-                this.setState({ score: this.state.score + 1 })
-            }
+            this.state.clicked.push(selected)
+            this.setState(this.props.shuffle(this.state.gifs))
+            this.setState({ score: this.state.score + 1 })            
         }
     }
 
     hello = () => {
         console.log('hello')
     }
-
-    // renderPage = () => {
-    //     if (this.state.lose === true) {
-    //         return <Lose
-    //             //handlePageChange={this.props.handlePageChange}
-    //             reset={this.reset}
-    //         />
-    //     } else if (this.state.lose === false) {
-    //         return
-    //     } else if (this.state.win === true) {
-    //         // play again screen/ choose new gifs
-    //     }
-    // }
 
     render() {
         return (
@@ -58,6 +42,7 @@ class GameContainer extends Component {
                     </h1>
                 </div>
                 <Gif
+                    shuffle={this.props.shuffle}
                     score={this.score}
                     check={this.check}
                     gifs={this.state.gifs}

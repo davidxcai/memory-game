@@ -13,6 +13,14 @@ class App extends Component {
     search: ''
   };
 
+  shuffle = a => {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return { gifs: a };
+  }
+
   handlePageChange = page => {
     this.setState({ currentPage: page });
   }
@@ -50,6 +58,7 @@ class App extends Component {
       return <GameContainer 
       handlePageChange={this.handlePageChange}
       gifs={this.state.gifs}
+      shuffle={this.shuffle}
       />
     }
   }
