@@ -1,3 +1,5 @@
+# Gif Memory Game
+
 [Website](https://helloimdavidhaha.github.io/memory-game/)
 
 ## About
