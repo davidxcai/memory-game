@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 [Website](https://helloimdavidhaha.github.io/memory-game/)
 
 ## About
@@ -15,3 +13,5 @@ Hosted on GitHub pages and GitHub used for versioning.
 
 ## Made by 
 ### Dafydd Zephyr
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
