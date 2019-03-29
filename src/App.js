@@ -4,6 +4,7 @@ import './App.css';
 import SearchForm from './components/SearchForm';
 import GameContainer from './components/GameContainer';
 import API from './utils/API';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -68,6 +69,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.renderPage()}
+        <Footer />
       </div>
     );
   }

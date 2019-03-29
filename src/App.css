@@ -24,16 +24,32 @@
 }
 
 body {
-  background-color: black;
+  background-color: #000e23;
 }
 
 .click-img {
   height: 180px;
 }
 
+.footer {
+  position: fixed;
+  height: 30px;
+  bottom: 0;
+  width: 100%;
+}
+
+.form-control:focus{border-color: #5cb85c;  box-shadow: none; -webkit-box-shadow: none;} 
+.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+
 .jumbotron {
-  background-color: beige;
   font-family: 'Montserrat', sans-serif;
+  background-image: url('https://ak0.picdn.net/shutterstock/videos/11349920/thumb/1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+hr {
+  /* border-color: antiquewhite; */
 }
 
 .pic-box {
@@ -42,6 +58,10 @@ body {
 
 .monster-font {
   font-family: 'Montserrat', sans-serif;
+}
+
+#search {
+  background-color: transparent;
 }
 
 @keyframes App-logo-spin {

@@ -4,25 +4,11 @@ import Jumbotron from './Jumbotron';
 function SearchForm(props) {
     return (
         <div className='container'>
-        <Jumbotron />
-            <div className='form-group'>
-            <label htmlFor='search' className='text-light'>Gif Search</label>
-            <input 
-                onChange={props.handleInputChange}
-                value={props.search}
-                name='search'
-                type='text'
-                className='form-control rounded-pill'
-                placeholder='Search for gifs...'
-                id='search'
-            />
-            <button 
-            onClick={props.handleFormSubmit}
-            className='btn btn-dark rounded-pill mt-3'
-            >
-                Search
-            </button>
-        </div>
+        <Jumbotron 
+        handleInputChange={props.handleInputChange}
+        search={props.search}
+        handleFormSubmit={props.handleFormSubmit}
+        />
         </div>
     )
 }
