@@ -14,6 +14,6 @@ An interactive website where users can search for gifs and play a memory game. C
 Hosted on GitHub pages and GitHub used for versioning.
 
 ## Made by 
-### Dafydd Zephyr
+### David Cai
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
